@@ -1,0 +1,43 @@
+{
+  "filters": {
+    "comments": true,
+    "allowlist": {
+      "allowlistConfigPaths": ["textlint-allowlist.json"]
+    }
+  },
+  "rules": {
+    "preset-ja-technical-writing": {
+      "sentence-length": {
+        "max": 150
+      },
+      "max-ten": {
+        "max": 5
+      },
+      "no-mix-dearu-desumasu": {
+        "preferInBody": "ですます",
+        "preferInList": "である",
+        "strict": false
+      },
+      "ja-no-mixed-period": {
+        "periodMark": "。",
+        "allowPeriodMarks": [":", "："]
+      },
+      "no-exclamation-question-mark": {
+        "allowFullWidthExclamation": true,
+        "allowFullWidthQuestion": true
+      },
+      "no-doubled-joshi": {
+        "min_interval": 2,
+        "allow": ["か", "が", "に", "も", "で", "と", "は", "では"]
+      },
+      "ja-no-weak-phrase": false,
+      "ja-no-redundant-expression": {
+        "dictOptions": {
+          "dict2": {
+            "disabled": true
+          }
+        }
+      }
+    }
+  }
+}

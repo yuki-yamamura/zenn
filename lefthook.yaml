@@ -1,0 +1,5 @@
+pre-commit:
+  jobs:
+    - name: textlint
+      glob: "articles/**/*.md"
+      run: npx textlint {staged_files}

@@ -1,0 +1,23 @@
+{
+  "name": "zenn",
+  "scripts": {
+    "lint:text": "textlint 'articles/**/*.md'",
+    "lint:text:fix": "textlint --fix 'articles/**/*.md'",
+    "prepare": "lefthook install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yuki-yamamura/zenn.git"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "zenn-cli": "^0.4.5"
+  },
+  "devDependencies": {
+    "lefthook": "^2.1.1",
+    "textlint": "^15.5.2",
+    "textlint-filter-rule-allowlist": "^4.0.0",
+    "textlint-filter-rule-comments": "^1.3.0",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2"
+  }
+}

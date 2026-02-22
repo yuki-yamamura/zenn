@@ -1,0 +1,23 @@
+name: textlint
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "articles/**"
+      - ".textlintrc.json"
+      - "textlint-allowlist.json"
+      - ".github/workflows/textlint.yaml"
+  pull_request:
+
+jobs:
+  textlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".node-version"
+          cache: npm
+      - run: npm ci
+      - run: npx textlint 'articles/**/*.md'
